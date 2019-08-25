@@ -1,3 +1,12 @@
+# HOW TO START
+install NodeJS and npm (https://www.npmjs.com/get-npm)
+clone this repo `git clone https://github.com/Sam-Kelly/comp3000-tnmStaging.git`
+`cd` into the directory
+run `npm install`
+run `npm start`
+this should work, but if you're missing any dependancy install it with `npm install [whatever]`
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
