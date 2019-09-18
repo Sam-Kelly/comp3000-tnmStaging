@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+#n-img {
+  position: absolute;
+  z-index: 1;
+}
+
+#n-svg {
+  position: relative;
+  z-index: 20;
+ 
+}
+
+#n-div {
+  position: relative;
+  display: inline-block;
+}
+
+.n-circle {
+  cursor: pointer;
+}
+</style>
+
+
+</head>
+
+<body>
+<div id="n-div">
+<img id="n-img" src="n.gif" alt="lymph node image"/>
+<svg id="n-svg" width="470" height="543">
+<circle id="n1" class="n-circle" cx="163" cy="270" r="5"  stroke-width="1" fill="transparent" onclick="selectNode(this.id)"/>
+<circle id="n2" class="n-circle" cx="152" cy="272" r="5"  stroke-width="1" fill="transparent" onclick="selectNode(this.id)"/>
+<circle id="n3" class="n-circle" cx="140" cy="285" r="6"  stroke-width="1" fill="transparent" onclick="selectNode(this.id)"/>
+<circle id="n4" class="n-circle" cx="141" cy="307" r="5"  stroke-width="1" fill="transparent" onclick="selectNode(this.id)"/>
+<circle id="n5" class="n-circle" cx="142" cy="318" r="5"  stroke-width="1" fill="transparent" onclick="selectNode(this.id)"/>
+<circle id="n6" class="n-circle" cx="152" cy="314" r="5"  stroke-width="1" fill="transparent" onclick="selectNode(this.id)"/>
+<circle id="n7" class="n-circle" cx="146" cy="340" r="6"  stroke-width="1" fill="transparent" onclick="selectNode(this.id)"/>
+<circle id="n8" class="n-circle" cx="140" cy="356" r="6"  stroke-width="1" fill="transparent" onclick="selectNode(this.id)"/>
+</svg>
+</div>
+
+
+<script type="text/javascript">
+
+function selectNode(nodeId) {
+  var currentFill = document.getElementById(nodeId).style.fill;
+  if(currentFill == "transparent") {
+    document.getElementById(nodeId).style.fill = "red";
+  } else {
+    document.getElementById(nodeId).style.fill = "transparent";
+  }
+}
+
+</script>
+
+</body>
+</html>
