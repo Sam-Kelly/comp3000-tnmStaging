@@ -4,71 +4,53 @@ import './index.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
-
-
-class Square extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			value: this.props.t,
-		};
-		this.clicked=this.clicked.bind(this)
-	}
-
-	clicked() {
-		this.setState({value: "X"})
-	}
-
-	render() {
-		return (
-			<button className="square" onClick={this.clicked}>
-				{this.state.value}
-			</button>
-		);
-	}
-}
-
-
-
-class DynamicContent extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	renderButton(text) {
-		return (
-			<Square t={text} />
-		);
-	}
-	render() {
-		return (
-			<div className="buttons">
-				{this.renderButton("click me")}
-				{this.renderButton("click me")}
-				{this.renderButton("click me")}
-			</div>
-		);
-	}
-
-
-}
-
 class N extends React.Component {
-	makeDynamicContent() {
-		return (new DynamicContent);
-	}
 
 	render() {
 		return (
-			<div>
-				<div><img src={ require('./images/test4.jpg') } /></div>
-				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-				<div>
-					<DynamicContent />
-				</div>
-				<div className="buttons">
-					<Link to="/intro"> <button type="button">BACK</button> </Link>
-				</div>
+			<div id="n-id">
+				<img id="n-img" src={ require('./images/n.gif') } alt="lymph node image" /> 
+				<svg id="n-svg" width="470" height="543">
+				<NCircle id="n1" cx="163" cy="270" r="5" />
+				<NCircle id="n2" cx="152" cy="272" r="5" />
+				<NCircle id="n3" cx="140" cy="285" r="6" />
+				<NCircle id="n4" cx="141" cy="307" r="5" />
+				<NCircle id="n5" cx="142" cy="318" r="5" />
+				<NCircle id="n6" cx="152" cy="314" r="5" />
+				<NCircle id="n7" cx="146" cy="340" r="6" />
+				<NCircle id="n8" cx="140" cy="356" r="6" />
+				</svg>
 			</div>
+		); 
+	}
+}
+
+class NCircle extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {isToggleOn: false, colour: "transparent"};
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	handleClick() {
+		var newToggleOnValue, newColourValue;
+		newToggleOnValue = !this.state.isToggleOn;
+		if(this.state.colour == "transparent") {
+			newColourValue = "red"
+		} else {
+			newColourValue = "transparent"
+		}
+		this.setState({
+			isToggleOn: newToggleOnValue,
+			colour: newColourValue
+
+		});
+	  }
+
+	render() {
+		return (
+		<circle id={this.props.id} className="n-circle" cx={this.props.cx}
+		cy={this.props.cy} r={this.props.r} strokeWidth="1" fill={this.state.colour} onClick={this.handleClick} /> 
 		);
 	}
 }
