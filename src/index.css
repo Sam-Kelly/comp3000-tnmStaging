@@ -55,3 +55,23 @@ p {
   margin-left: 20px;
 }
 
+#n-img {
+  position: absolute;
+  z-index: 1;
+}
+
+#n-svg {
+  position: relative;
+  z-index: 20;
+ 
+}
+
+#n-div {
+  position: relative;
+  display: inline-block;
+}
+
+.n-circle {
+  cursor: pointer;
+}
+
