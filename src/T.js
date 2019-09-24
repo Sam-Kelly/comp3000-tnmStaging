@@ -24,8 +24,8 @@ class T extends React.Component {
                         },
                         largeImage: {
                             src: watchImg1,
-                            width: 1200,
-                            height: 1800
+                            width: 2560,
+                            height: 1900
                         }
                     }} />
 				</div>
