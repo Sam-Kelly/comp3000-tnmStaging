@@ -7,8 +7,9 @@ import {Link} from 'react-router-dom';
 class N extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {nodesSelected: 0};
-		this.handleClick= this.handleClick.bind(this);
+		this.state = {nodesSelected: 0, answer: <p></p>};
+		this.handleClick = this.handleClick.bind(this);
+		this.checkAnswer = this.checkAnswer.bind(this);
 	}
 
 	handleClick(value) {
@@ -18,8 +19,22 @@ class N extends React.Component {
 		console.log(this.state.nodesSelected)
 	}
 
+	checkAnswer() {
+		var elem;
+		if (this.state.nodesSelected >= 1 && this.state.nodesSelected <= 3) {
+			elem = <p>Correct! N1 is 1-3 regional lymph nodes.</p>
+		} else {
+			elem = <p>Incorrect! N1 is 1-3 regional lymph nodes.</p>
+		}
+		this.setState({
+			answer: elem
+		})
+		
+	}
+
 	render() {
 		return (
+			<div>
 			<div id="n-id">
 				<img id="n-img" src={ require('./images/n.gif') } alt="lymph node image" /> 
 				<svg id="n-svg" width="470" height="543">
@@ -31,8 +46,12 @@ class N extends React.Component {
 				<NCircle handler={this.handleClick} id="n6" cx="152" cy="314" r="5" />
 				<NCircle handler={this.handleClick} id="n7" cx="146" cy="340" r="6" />
 				<NCircle handler={this.handleClick} id="n8" cx="140" cy="356" r="6" />
-				
 				</svg>
+			</div>
+			<button onClick={this.checkAnswer}>
+				Submit answer
+			</button>
+			{this.state.answer}
 			</div>
 		); 
 	}
