@@ -100,19 +100,23 @@ class T extends React.Component {
 
 
 		<div className="col-sm-12">
-			<p>Image from <a href="https://www.best.edu.au/s/zi4ce6h3">https://www.best.edu.au/s/zi4ce6h3</a> </p>
-			<p>Which stage is the tumor?</p>
-			<div className="col-sm-6">
-			<Fieldset >
-				<div><label htmlFor="t0"><input type="radio" name="schedule-weekly-option" value="t0" id="t0" onChange={this.handleChoice.bind(this)} />T0</label></div>
-				<div><label htmlFor="t1"><input type="radio" name="schedule-weekly-option" value="t1" id="t1" onChange={this.handleChoice.bind(this)} />T1</label></div>
-				<div><label htmlFor="t2"><input type="radio" name="schedule-weekly-option" value="t2" id="t2" onChange={this.handleChoice.bind(this)} />T2</label></div>
-				<div><label htmlFor="t3"><input type="radio" name="schedule-weekly-option" value="t3" id="t3" onChange={this.handleChoice.bind(this)} />T3</label></div>
-				<div><label htmlFor="t4"><input type="radio" name="schedule-weekly-option" value="t4" id="t4" onChange={this.handleChoice.bind(this)} />T4</label></div>
-			</Fieldset>
+			<div>
+				<p>Image from <a href="https://www.best.edu.au/s/zi4ce6h3">https://www.best.edu.au/s/zi4ce6h3</a> </p>
+				<p>Which stage is the tumor?</p>
+				<div>
+				<Fieldset >
+					<div><label htmlFor="t0"><input type="radio" name="schedule-weekly-option" value="t0" id="t0" onChange={this.handleChoice.bind(this)} />T0</label></div>
+					<div><label htmlFor="t1"><input type="radio" name="schedule-weekly-option" value="t1" id="t1" onChange={this.handleChoice.bind(this)} />T1</label></div>
+					<div><label htmlFor="t2"><input type="radio" name="schedule-weekly-option" value="t2" id="t2" onChange={this.handleChoice.bind(this)} />T2</label></div>
+					<div><label htmlFor="t3"><input type="radio" name="schedule-weekly-option" value="t3" id="t3" onChange={this.handleChoice.bind(this)} />T3</label></div>
+					<div><label htmlFor="t4"><input type="radio" name="schedule-weekly-option" value="t4" id="t4" onChange={this.handleChoice.bind(this)} />T4</label></div>
+				</Fieldset>
+				</div>
 			</div>
 
-			<div className="col-sm-6">{response}</div>
+			<div>
+				{response}
+			</div>
 		</div>
 	</div>
 
