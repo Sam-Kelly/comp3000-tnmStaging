@@ -22,9 +22,9 @@ class N extends React.Component {
 	checkAnswer() {
 		var elem;
 		if (this.state.nodesSelected >= 1 && this.state.nodesSelected <= 3) {
-			elem = <p>Correct! N1 is 1-3 regional lymph nodes.</p>
+			elem = <div style={{border:"2px solid green", margin:"2px", padding: "15px", clear:"left"}}>Correct! N1 is 1 - 3 regional lymph nodes.</div>
 		} else {
-			elem = <p>Incorrect! N1 is 1-3 regional lymph nodes.</p>
+			elem = <div style={{border:"2px solid red", margin:"2px", padding: "15px", clear:"left"}}>Incorrect! N1 is 1 - 3 regional lymph nodes.</div>
 		}
 		this.setState({
 			answer: elem
@@ -35,6 +35,17 @@ class N extends React.Component {
 	render() {
 		return (
 			<div>
+			<div className="nav">
+						<Link to="/intro"> <button type="button" className="col-sm-3">Intro</button> </Link>
+						<Link to="/t"> <button type="button" className="col-sm-3">Tumour Stage (T)</button> </Link>
+						<Link to="/n"> <button type="button" className="col-sm-3">Nodes Stage (N)</button> </Link>
+						<Link to="/m"> <button type="button" className="col-sm-3">Metastasis Stage (M)</button> </Link>
+				</div>
+
+				<h3>Node Stage (N)</h3>
+				<p className="col-sm-12">It was found that the value for “N” is 1. Please select the correct amount of lymph nodes that corresponds to N1 in the diagram below. </p>
+				
+
 			<div id="n-id">
 				<img id="n-img" src={ require('./images/n.gif') } alt="lymph node image" /> 
 				<svg id="n-svg" width="470" height="543">
@@ -48,7 +59,7 @@ class N extends React.Component {
 				<NCircle handler={this.handleClick} id="n8" cx="140" cy="356" r="6" />
 				</svg>
 			</div>
-			<button onClick={this.checkAnswer}>
+			<button className="col-sm-4" onClick={this.checkAnswer}>
 				Submit answer
 			</button>
 			{this.state.answer}
