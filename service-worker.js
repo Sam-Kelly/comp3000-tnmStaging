@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/comp3000-tnmStaging/precache-manifest.d5c37320b675a55a9834066cf04ca4c1.js"
+  "/comp3000-tnmStaging/precache-manifest.9d6bfc14f7ea6a447383c3e2e659cdbd.js"
 );
 
 self.addEventListener('message', (event) => {
