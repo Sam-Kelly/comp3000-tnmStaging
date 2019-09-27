@@ -16,11 +16,11 @@ class StagingApp extends React.Component {
 			<Router>
 				<div className="App">
 				<Switch>
-					<Route exact path={`/`} component={Index} />
-					<Route exact path={`/intro`} component={Intro} />
-					<Route exact path={`/t`} component={T} />
-					<Route exact path={`/n`} component={N} />
-					<Route exact path={`/m`} component={M} />
+					<Route exact path={process.env.PUBLIC_URL + '/'} component={Index} />
+					<Route exact path={process.env.PUBLIC_URL + '/intro'} component={Intro} />
+					<Route exact path={process.env.PUBLIC_URL + '/t'} component={T} />
+					<Route exact path={process.env.PUBLIC_URL + '/n'} component={N} />
+					<Route exact path={process.env.PUBLIC_URL + '/m'} component={M} />
 				</Switch>
 				</div>
 			</Router>
@@ -35,9 +35,9 @@ class Index extends React.Component {
 		return(
 			<div>
 			<div><img src={ require('./images/test2.jpg') } /></div>
-			<p> welcome to app Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+			<p> 2. is this actually working?? welcome to app Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
 			<div className="buttons">
-				<Link to='/intro'>
+				<Link to={process.env.PUBLIC_URL + '/intro'}>
 					<button type="button">click to begin</button>
 				</Link>
 			</div>

@@ -36,10 +36,10 @@ class N extends React.Component {
 		return (
 			<div>
 				<div className="nav">
-							<Link to={`/`}> <button type="button" className="col-sm-3">Intro</button> </Link>
-							<Link to={`/t`}> <button type="button" className="col-sm-3">Tumour Stage (T)</button> </Link>
-							<Link to={`/n`}> <button type="button" className="col-sm-3">Nodes Stage (N)</button> </Link>
-							<Link to={`/m`}> <button type="button" className="col-sm-3">Metastasis Stage (M)</button> </Link>
+							<Link to={process.env.PUBLIC_URL + '/intro'}> <button type="button" className="col-sm-3">Intro</button> </Link>
+							<Link to={process.env.PUBLIC_URL + '/t'}> <button type="button" className="col-sm-3">Tumour Stage (T)</button> </Link>
+							<Link to={process.env.PUBLIC_URL + '/n'}> <button type="button" className="col-sm-3">Nodes Stage (N)</button> </Link>
+							<Link to={process.env.PUBLIC_URL + '/m'}> <button type="button" className="col-sm-3">Metastasis Stage (M)</button> </Link>
 				</div>
 			<div>
 				<h3>Node Stage (N)</h3>
