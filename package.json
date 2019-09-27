@@ -1,7 +1,6 @@
 {
   "name": "tnm",
   "version": "0.1.0",
-  "private": true,
   "homepage": "http://Sam-Kelly.github.io/comp3000-tnmStaging",
   "dependencies": {
     "react": "^16.9.0",
