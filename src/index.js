@@ -16,8 +16,8 @@ class StagingApp extends React.Component {
 			<Router>
 				<div className="App">
 				<Switch>
-					{/*<Route path="/" exact component={Index} />*/}
-					<Route exact path="/" component={Intro} />
+					<Route exact path={process.env.PUBLIC_URL + '/'} component={Index} />
+					<Route exact path="/intro" component={Intro} />
 					<Route exact path="/t" component={T} />
 					<Route exact path="/n" component={N} />
 					<Route exact path="/m" component={M} />
