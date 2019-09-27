@@ -44,7 +44,7 @@ class M extends React.Component {
 		return (
 			<div>
 				<div className="nav">
-						<Link to="/intro"> <button type="button" className="col-sm-3">Intro</button> </Link>
+						<Link to="/"> <button type="button" className="col-sm-3">Intro</button> </Link>
 						<Link to="/t"> <button type="button" className="col-sm-3">Tumour Stage (T)</button> </Link>
 						<Link to="/n"> <button type="button" className="col-sm-3">Nodes Stage (N)</button> </Link>
 						<Link to="/m"> <button type="button" className="col-sm-3">Metastasis Stage (M)</button> </Link>

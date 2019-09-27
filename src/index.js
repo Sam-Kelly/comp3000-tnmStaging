@@ -16,11 +16,11 @@ class StagingApp extends React.Component {
 			<Router>
 				<div className="App">
 				<Switch>
-					<Route path="/" exact component={Index} />
-					<Route path="/intro" component={Intro} />
-					<Route path="/t" component={T} />
-					<Route path="/n" component={N} />
-					<Route path="/m" component={M} />
+					{/*<Route path="/" exact component={Index} />*/}
+					<Route exact path="/" component={Intro} />
+					<Route exact path="/t" component={T} />
+					<Route exact path="/n" component={N} />
+					<Route exact path="/m" component={M} />
 				</Switch>
 				</div>
 			</Router>
@@ -49,7 +49,7 @@ class Index extends React.Component {
 // ========================================
 
 ReactDOM.render(
-  <StagingApp />,
+  <Router basename={process.env.PUBLIC_URL}><StagingApp /></Router>,
   document.getElementById('root')
 );
 
