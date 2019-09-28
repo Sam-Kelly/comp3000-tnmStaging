@@ -12,6 +12,7 @@ import mucosa from './images/mucosa.png';
 import submucosa from './images/submucosa.png';
 import muscularis from './images/muscularis.png';
 import serosa from './images/serosa.png';
+import endstage from './images/endstage.png';
 
 class T extends React.Component {
 
@@ -35,28 +36,28 @@ class T extends React.Component {
 			response = <p>Select a choice from the list shown</p>
 		}
 		if (this.state.ans=="t0") {
-			response = <div style={{border:"2px solid red", padding:"15px"}}>T0 is not correct. This layer is the mucosa. A tumour that invades into this layer is Tis (carcinoma in-situ).
+			response = <div style={{border:"2px solid red", padding:"15px"}}> Tis is not correct. A tumour that is “Tis” has invaded into the mucosa, which is the layer highlighted below.
 			<br></br><img src={mucosa} style={{padding:"15px", width:"500px", height:"500px"}}></img>
 			</div>
 		}
 		if (this.state.ans=="t1") {
-			response = <div style={{border:"2px solid green", padding:"15px"}}>T1 is correct. This layer is the submucosa. A tumour that invades into this layer is T1.
+			response = <div style={{border:"2px solid green", padding:"15px"}}>T1 is correct. A tumour that is “T1” has invaded into the submucosa, which is the layer highlighted below.
 			<br></br><img src={submucosa} style={{padding:"15px", width:"500px", height:"500px"}}></img>
 			</div>
 		}
 		if (this.state.ans=="t2") {
-			response = <div style={{border:"2px solid red", padding:"15px"}}>T2 is not correct. This layer is the muscularis propria. A tumour that invades into this layer is T2.
+			response = <div style={{border:"2px solid red", padding:"15px"}}>T2 is not correct. A tumour that is “T2” has invaded into the muscularis propria, which is the layer highlighted below.
 			<br></br><img src={muscularis} style={{padding:"15px", width:"500px", height:"500px"}}></img>
 			</div>
 		}
 		if (this.state.ans=="t3") {
-			response = <div style={{border:"2px solid red", padding:"15px"}}>T3 is not correct. This layer is the serosa / adventitia. A tumour that invades into this layer is T3.
+			response = <div style={{border:"2px solid red", padding:"15px"}}>T3 is not correct. A tumour that is “T3” has invaded into the serosa / adventitia, which is the layer highlighted below.
 			<br></br><img src={serosa} style={{padding:"15px", width:"500px", height:"500px"}}></img>
 			</div>
 		}
 		if (this.state.ans=="t4") {
-			response = <div style={{border:"2px solid red", padding:"15px"}}>T4 is not correct. A tumour that has grown through all the layers of the colon is T4. 
-			<br></br><img src={serosa} style={{padding:"15px", width:"500px", height:"500px"}}></img>
+			response = <div style={{border:"2px solid red", padding:"15px"}}>T4 is not correct. A tumour that is "T4" has grown through all the layers of the colon.<br></br>
+			<img src={endstage} style={{padding:"15px", width:"500px", height:"500px"}}></img>
 			</div>
 		}
 		return response;
@@ -105,7 +106,7 @@ class T extends React.Component {
 				<p>Which stage is the tumor?</p>
 				<div>
 				<Fieldset >
-					<div><label htmlFor="t0"><input type="radio" name="schedule-weekly-option" value="t0" id="t0" onChange={this.handleChoice.bind(this)} />T0</label></div>
+					<div><label htmlFor="t0"><input type="radio" name="schedule-weekly-option" value="t0" id="t0" onChange={this.handleChoice.bind(this)} />Tis</label></div>
 					<div><label htmlFor="t1"><input type="radio" name="schedule-weekly-option" value="t1" id="t1" onChange={this.handleChoice.bind(this)} />T1</label></div>
 					<div><label htmlFor="t2"><input type="radio" name="schedule-weekly-option" value="t2" id="t2" onChange={this.handleChoice.bind(this)} />T2</label></div>
 					<div><label htmlFor="t3"><input type="radio" name="schedule-weekly-option" value="t3" id="t3" onChange={this.handleChoice.bind(this)} />T3</label></div>

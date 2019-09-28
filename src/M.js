@@ -4,7 +4,7 @@ import './index.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import Fieldset, { withFieldset, withFullName } from 'react-fieldset';
-
+import metastasisCT from './images/metastasisCT.png';
 
 class M extends React.Component {
 	constructor(props) {
@@ -53,9 +53,10 @@ class M extends React.Component {
 			<h3>Metastasis Stage (N)</h3>
 			<p className="col-sm-12">Patricia’s abdominal CT is shown below. What is the value of “M”? Consider what the most common site of metastasis for colon cancer is. </p>
 				
-			<div><img src={ require('./images/test6.jpg') } /></div>
+			<div><img src={metastasisCT} style={{ height: "500px"}}/></div>
 				
 			<div>
+				<br></br>
 				<Fieldset>
 					<div><label htmlFor="m0"><input type="radio" name="schedule-weekly-option" value="m0" id="m0" onChange={this.handleChoice.bind(this)} />M0</label></div>
 					<div><label htmlFor="m1"><input type="radio" name="schedule-weekly-option" value="m1" id="m1" onChange={this.handleChoice.bind(this)} />M1</label></div>
