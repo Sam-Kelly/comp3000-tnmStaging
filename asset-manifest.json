@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/comp3000-tnmStaging/static/css/main.a3e56332.chunk.css",
-    "main.js": "/comp3000-tnmStaging/static/js/main.9a39cac8.chunk.js",
-    "main.js.map": "/comp3000-tnmStaging/static/js/main.9a39cac8.chunk.js.map",
+    "main.js": "/comp3000-tnmStaging/static/js/main.5e63f571.chunk.js",
+    "main.js.map": "/comp3000-tnmStaging/static/js/main.5e63f571.chunk.js.map",
     "runtime~main.js": "/comp3000-tnmStaging/static/js/runtime~main.89fab912.js",
     "runtime~main.js.map": "/comp3000-tnmStaging/static/js/runtime~main.89fab912.js.map",
     "static/css/2.fb6ed098.chunk.css": "/comp3000-tnmStaging/static/css/2.fb6ed098.chunk.css",
-    "static/js/2.0b6d60d3.chunk.js": "/comp3000-tnmStaging/static/js/2.0b6d60d3.chunk.js",
-    "static/js/2.0b6d60d3.chunk.js.map": "/comp3000-tnmStaging/static/js/2.0b6d60d3.chunk.js.map",
+    "static/js/2.be41655b.chunk.js": "/comp3000-tnmStaging/static/js/2.be41655b.chunk.js",
+    "static/js/2.be41655b.chunk.js.map": "/comp3000-tnmStaging/static/js/2.be41655b.chunk.js.map",
     "index.html": "/comp3000-tnmStaging/index.html",
-    "precache-manifest.e7592b3b092762cd3bc2afc230d19941.js": "/comp3000-tnmStaging/precache-manifest.e7592b3b092762cd3bc2afc230d19941.js",
+    "precache-manifest.f843edb856719ee4135f7f35cc85439a.js": "/comp3000-tnmStaging/precache-manifest.f843edb856719ee4135f7f35cc85439a.js",
     "service-worker.js": "/comp3000-tnmStaging/service-worker.js",
     "static/css/2.fb6ed098.chunk.css.map": "/comp3000-tnmStaging/static/css/2.fb6ed098.chunk.css.map",
     "static/css/main.a3e56332.chunk.css.map": "/comp3000-tnmStaging/static/css/main.a3e56332.chunk.css.map",
     "static/media/T_cancer.jpg": "/comp3000-tnmStaging/static/media/T_cancer.79be7f99.jpg",
+    "static/media/endstage.png": "/comp3000-tnmStaging/static/media/endstage.5c625fe3.png",
+    "static/media/metastasisCT.png": "/comp3000-tnmStaging/static/media/metastasisCT.02ba303e.png",
     "static/media/mucosa.png": "/comp3000-tnmStaging/static/media/mucosa.85c01dd3.png",
     "static/media/muscularis.png": "/comp3000-tnmStaging/static/media/muscularis.d18111dc.png",
     "static/media/n.gif": "/comp3000-tnmStaging/static/media/n.41bfa8f6.gif",
     "static/media/serosa.png": "/comp3000-tnmStaging/static/media/serosa.66a91a21.png",
     "static/media/submucosa.png": "/comp3000-tnmStaging/static/media/submucosa.8a88a541.png",
-    "static/media/test.jpg": "/comp3000-tnmStaging/static/media/test.7e9be033.jpg",
-    "static/media/test6.jpg": "/comp3000-tnmStaging/static/media/test6.9890c117.jpg"
+    "static/media/test.jpg": "/comp3000-tnmStaging/static/media/test.7e9be033.jpg"
   }
 }

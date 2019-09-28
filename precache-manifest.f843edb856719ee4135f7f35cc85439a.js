@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a47a3c0d30ca53cfbe100ec852f70d8e",
+    "revision": "513f2ac7eccde237b5eb85e7f143eb36",
     "url": "/comp3000-tnmStaging/index.html"
   },
   {
-    "revision": "cdb31e7bf373556f7062",
+    "revision": "0071392d78743a815f53",
     "url": "/comp3000-tnmStaging/static/css/2.fb6ed098.chunk.css"
   },
   {
-    "revision": "bb4ebf879dc9e9cce94c",
+    "revision": "de9aaed51d950b7cca1b",
     "url": "/comp3000-tnmStaging/static/css/main.a3e56332.chunk.css"
   },
   {
-    "revision": "cdb31e7bf373556f7062",
-    "url": "/comp3000-tnmStaging/static/js/2.0b6d60d3.chunk.js"
+    "revision": "0071392d78743a815f53",
+    "url": "/comp3000-tnmStaging/static/js/2.be41655b.chunk.js"
   },
   {
-    "revision": "bb4ebf879dc9e9cce94c",
-    "url": "/comp3000-tnmStaging/static/js/main.9a39cac8.chunk.js"
+    "revision": "de9aaed51d950b7cca1b",
+    "url": "/comp3000-tnmStaging/static/js/main.5e63f571.chunk.js"
   },
   {
     "revision": "393d2aebad5454c15a97",
@@ -26,6 +26,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "79be7f990ff324681e168b233e2bd07a",
     "url": "/comp3000-tnmStaging/static/media/T_cancer.79be7f99.jpg"
+  },
+  {
+    "revision": "5c625fe3c60db4d76c60007dce7c0734",
+    "url": "/comp3000-tnmStaging/static/media/endstage.5c625fe3.png"
+  },
+  {
+    "revision": "02ba303e4508457ca47a425c3534cca4",
+    "url": "/comp3000-tnmStaging/static/media/metastasisCT.02ba303e.png"
   },
   {
     "revision": "85c01dd35e8f442bfa5f36e20ba6714c",
@@ -50,9 +58,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7e9be033a955f18f777a87d28f93be3e",
     "url": "/comp3000-tnmStaging/static/media/test.7e9be033.jpg"
-  },
-  {
-    "revision": "9890c117374d4e9618a86e6cc621c839",
-    "url": "/comp3000-tnmStaging/static/media/test6.9890c117.jpg"
   }
 ]);
