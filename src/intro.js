@@ -14,12 +14,13 @@ class Intro extends React.Component {
 		if (true) { //serve them this thing if they havent gone through t, m, and n.
 			return (
 				<div>
-					<div><img src={ require('./images/test.jpg') } /></div>
-					<p> Change to test some stuff. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+					<p> 			
+					The goal is to Identfy the TNM Stage of Patricia's cancer by working through T, N and M. Click on the following to continue.
+					</p>
 					<div className="buttons">
-						<Link to={process.env.PUBLIC_URL + '/t'}> <button type="button">T</button> </Link>
-						<Link to={process.env.PUBLIC_URL + '/n'}> <button type="button">N</button> </Link>
-						<Link to={process.env.PUBLIC_URL + '/m'}> <button type="button">M</button> </Link>
+						<Link to={process.env.PUBLIC_URL + '/t'}> <button type="button">Tumour (T)</button> </Link>
+						<Link to={process.env.PUBLIC_URL + '/n'}> <button type="button">Nodes (N)</button> </Link>
+						<Link to={process.env.PUBLIC_URL + '/m'}> <button type="button">Metastasis (M)</button> </Link>
 					</div>
 				</div>
 			);
