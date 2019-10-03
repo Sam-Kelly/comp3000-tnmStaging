@@ -27,7 +27,7 @@ class M extends React.Component {
 			response = <p>Select a choice from the list above</p>
 		}
 		if (this.state.ans=="m0") {
-			response = <div style={{border:"2px solid green", margin:"2px", padding: "15px", clear:"left"}}>Good job! The abdominal CT is unremarkable – there is no indication of metastatic disease. M0 is correct. <br></br><br></br>Now that we know that T is T1, N is 1, and M is 0, what is the overall stage of Patricia's cancer?</div>
+			response = <div style={{border:"2px solid green", margin:"2px", padding: "15px", clear:"left"}}>Good job! The abdominal CT is unremarkable – there is no indication of metastatic disease. M0 is correct. <br></br><br></br>Now that we know that T, N, and M, what is the overall stage of the cancer?</div>
 		}
 		if (this.state.ans=="m1") {
 			response = <div style={{border:"2px solid red", margin:"2px", padding: "15px", clear:"left"}}>Good try! The abdominal CT is unremarkable – there is no indication of metastatic disease. M1 is incorrect.</div>
@@ -51,7 +51,7 @@ class M extends React.Component {
 				</div>
 
 			<h3>Metastasis Stage (M)</h3>
-			<p className="col-sm-12">Patricia’s abdominal CT is shown below. What is the value of “M”? Consider what the most common site of metastasis for colon cancer is. </p>
+			<p className="col-sm-12">An abdominal CT is shown below. What is the value of “M”? Consider what the most common site of metastasis for colon cancer is. </p>
 				
 			<div><img src={metastasisCT} style={{ height: "500px"}}/></div>
 				

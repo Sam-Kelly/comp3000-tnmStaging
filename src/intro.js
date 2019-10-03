@@ -15,7 +15,7 @@ class Intro extends React.Component {
 			return (
 				<div>
 					<p> 			
-					The goal is to Identfy the TNM Stage of Patricia's cancer by working through T, N and M. Click on the following to continue.
+					The goal is to identify the TNM Stage of a cancer by working through T, N and M. Click on the following to continue.
 					</p>
 					<div className="buttons">
 						<Link to={process.env.PUBLIC_URL + '/t'}> <button type="button">Tumour (T)</button> </Link>

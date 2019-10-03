@@ -79,7 +79,7 @@ class T extends React.Component {
 	</div>
 
 	<h3>Tumour Stage (T)</h3>
-	<p className="col-sm-12">The histopathology for Patricia’s cancer is shown below. What is the value of “T”?</p>
+	<p className="col-sm-12">The histopathology for a cancer is shown below. What is the value of “T”?</p>
 	
 	<div class="row">	
 		<div className="fluid col-sm-6">
@@ -103,7 +103,7 @@ class T extends React.Component {
 		<div className="col-sm-12">
 			<div>
 				<p>Image from <a href="https://www.best.edu.au/s/zi4ce6h3">https://www.best.edu.au/s/zi4ce6h3</a> </p>
-				<p>Which stage is the tumor?</p>
+				
 				<div>
 				<Fieldset >
 					<div><label htmlFor="t0"><input type="radio" name="schedule-weekly-option" value="t0" id="t0" onChange={this.handleChoice.bind(this)} />Tis</label></div>
