@@ -43,7 +43,7 @@ class N extends React.Component {
 				</div>
 			<div>
 				<h3>Node Stage (N)</h3>
-				<p>It was found that the value for “N” is 1. Please select the correct amount of lymph nodes that corresponds to N1 in the diagram below. </p>
+				<p>It was found that the value for “N” is 1. Please select the correct amount of lymph nodes within the dotted line area that corresponds to N1 in the diagram below. </p>
 			</div>
 
 			<div id="n-id">
