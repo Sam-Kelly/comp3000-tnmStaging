@@ -7,6 +7,8 @@ import Intro from './intro'
 import T from './T'
 import M from './M'
 import N from './N'
+import Load from './Launch'
+import FHIR from "fhirclient"
 
 
 class StagingApp extends React.Component {
@@ -21,6 +23,7 @@ class StagingApp extends React.Component {
 					<Route exact path={process.env.PUBLIC_URL + '/t'} component={T} />
 					<Route exact path={process.env.PUBLIC_URL + '/n'} component={N} />
 					<Route exact path={process.env.PUBLIC_URL + '/m'} component={M} />
+					<Route exact path={process.env.PUBLIC_URL + '/launch'} component={Load} />
 				</Switch>
 				</div>
 			</Router>
@@ -32,6 +35,11 @@ class StagingApp extends React.Component {
 class Index extends React.Component {
 
 	render() {
+		FHIR.oauth2.ready()
+    .then(client => client.request("Patient"))
+    .then(console.log)
+    .catch(console.error);
+
 		return(
 			<div>
 			<p> 
@@ -46,7 +54,9 @@ class Index extends React.Component {
 			</div>
 			</div>
 		);
-	} 
+	}
+
+
 }
 
 // ========================================
