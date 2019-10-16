@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "homepage": "https://Sam-Kelly.github.io/comp3000-tnmStaging",
   "dependencies": {
+    "fhirclient": "^2.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1",
+    "react-fieldset": "^3.1.6",
+    "react-image-magnify": "2.7.4",
     "react-responsive-pinch-zoom-pan": "0.2.2",
-    "react-image-magnify": "2.7.4"
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
