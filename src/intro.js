@@ -10,7 +10,20 @@ import N from './N'
 
 class Intro extends React.Component {
 
+	completionMessage() {
+		console.log(window.Tval);
+		console.log(window.Ncomplete);
+		console.log(window.Mval);
+		if (window.Tval == "t1" && window.Ncomplete == 1 && window.Mval == "m0") {
+			return <p>Congratulations, you have sucessfully completed the TNM staging process.</p>;
+		} else {
+			return <p>Please complete the T, N, and M portions of the app.</p>;
+		}
+	}
+
 	render() {
+		let completion;
+		completion = this.completionMessage()
 		if (true) { //serve them this thing if they havent gone through t, m, and n.
 			return (
 				<div>
@@ -22,6 +35,7 @@ class Intro extends React.Component {
 						<Link to={process.env.PUBLIC_URL + '/n'}> <button type="button">Nodes (N)</button> </Link>
 						<Link to={process.env.PUBLIC_URL + '/m'}> <button type="button">Metastasis (M)</button> </Link>
 					</div>
+					{completion}
 				</div>
 			);
 		} else { // if they've been through t,n,m let them go on to the next stage.

@@ -24,7 +24,6 @@ class T extends React.Component {
 	}
 
 	handleChoice(e) {
-		console.log(e.target.value);
 		//this.state.ans=e.target.value;
 		this.setState({ans : e.target.value});
 		window.Tval = e.target.value;

@@ -23,13 +23,14 @@ class N extends React.Component {
 		var elem;
 		if (this.state.nodesSelected >= 1 && this.state.nodesSelected <= 3) {
 			elem = <div style={{border:"2px solid green", margin:"2px", padding: "15px", clear:"left"}}>Correct! N1 is 1 - 3 regional lymph nodes.</div>
+			window.Ncomplete = 1;
 		} else {
 			elem = <div style={{border:"2px solid red", margin:"2px", padding: "15px", clear:"left"}}>Incorrect! N1 is 1 - 3 regional lymph nodes.</div>
 		}
 		this.setState({
 			answer: elem
 		})
-		
+				
 		window.Nval = elem;
 	}
 
