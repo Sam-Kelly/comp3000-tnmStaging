@@ -15,6 +15,7 @@ class StagingApp extends React.Component {
 	render() {
 		window.Tval = 0;
 		window.Nval = "";
+		window.Ncomplete = 0;
 		window.Mval = 0;
 		return (
 			<div>
