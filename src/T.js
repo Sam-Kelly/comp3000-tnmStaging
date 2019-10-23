@@ -27,6 +27,7 @@ class T extends React.Component {
 		console.log(e.target.value);
 		//this.state.ans=e.target.value;
 		this.setState({ans : e.target.value});
+		window.Tval = e.target.value;
 		this.updateResponse()
 	}
 
@@ -64,8 +65,10 @@ class T extends React.Component {
 	}
 
  render() {
+	this.state.ans = window.Tval;
 	let response;
 	response = this.updateResponse();
+	console.log(window.Tval);
 
   return (
    <div>
@@ -79,7 +82,7 @@ class T extends React.Component {
 	</div>
 
 	<h3>Tumour Stage (T)</h3>
-	<p className="col-sm-12">The histopathology for a cancer is shown below. What is the value of “T”?</p>
+	<p className="col-sm-12">The histopathology for a cancer is shown below. What is the value of “T”? Please allow time for the image to load.</p>
 	
 	<div class="row">	
 		<div className="fluid col-sm-6">

@@ -30,9 +30,11 @@ class N extends React.Component {
 			answer: elem
 		})
 		
+		window.Nval = elem;
 	}
 
 	render() {
+		this.state.answer = window.Nval;
 		return (
 			<div>
 				<div className="nav">

@@ -18,6 +18,7 @@ class M extends React.Component {
 		console.log(e.target.value);
 		//this.state.ans=e.target.value;
 		this.setState({ans : e.target.value});
+		window.Mval = e.target.value;
 		this.updateResponse()
 	}
 
@@ -37,6 +38,7 @@ class M extends React.Component {
 	}
 
 	render() {
+		this.state.ans = window.Mval;
 		let response;
 		response = this.updateResponse();
 		console.log("render");

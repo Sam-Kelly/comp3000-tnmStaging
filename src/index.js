@@ -13,6 +13,9 @@ import FHIR from "fhirclient"
 
 class StagingApp extends React.Component {
 	render() {
+		window.Tval = 0;
+		window.Nval = "";
+		window.Mval = 0;
 		return (
 			<div>
 			<Router>
