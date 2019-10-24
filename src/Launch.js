@@ -10,7 +10,7 @@ class Launch extends React.Component {
 	render() {
 		FHIR.oauth2.authorize({
 			client_id: "tnm-staging",
-			scope    : "patient/*.* launch"
+			scope    : "patient/*.* launch system/*.*"
 		})
 		return (
 		<div>

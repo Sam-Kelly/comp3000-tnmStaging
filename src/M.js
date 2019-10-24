@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import Fieldset, { withFieldset, withFullName } from 'react-fieldset';
 import metastasisCT from './images/metastasisCT.png';
+import FHIR from "fhirclient"
 
 class M extends React.Component {
 	constructor(props) {
@@ -29,6 +30,53 @@ class M extends React.Component {
 		}
 		if (this.state.ans=="m0") {
 			response = <div style={{border:"2px solid green", margin:"2px", padding: "15px", clear:"left"}}>Good job! The abdominal CT is unremarkable – there is no indication of metastatic disease. M0 is correct. <br></br><br></br>Now that we know that T, N, and M, what is the overall stage of the cancer?</div>
+			FHIR.oauth2.ready()
+    		.then(client => client.create(
+				{
+					"resourceType" : "Observation",
+					"meta" : {
+					  "profile" : [
+						"http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-TNMClinicalDistantMetastasesCategory"
+					  ]
+					},
+					"category" : [
+					  {
+						"coding" : [
+						  {
+							"system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+							"code" : "laboratory"
+						  }
+						]
+					  }
+					],
+					"code" : {
+					  "coding" : [
+						{
+						  "system" : "http://loinc.org",
+						  "code" : "21907-1",
+						  "display" : "Distant metastases.clinical [Class] Cancer"
+						}
+					  ]
+					},
+					"subject" : {
+					  "reference" : "Patient/31002",
+					  "display" : "Minimal Minimal"
+					},
+					"valueCodeableConcept" : {
+					  "coding" : [
+						{
+						  "system" : "hhttp://cancerstaging.org",
+						  "code" : "cM0",
+						  "display" : "M0"
+						}
+					  ]
+					},
+					"method" : {
+					  "text" : "AJCC Version 8"
+					}
+			})
+		.then(console.log)
+		.catch(console.error));
 		}
 		if (this.state.ans=="m1") {
 			response = <div style={{border:"2px solid red", margin:"2px", padding: "15px", clear:"left"}}>Good try! The abdominal CT is unremarkable – there is no indication of metastatic disease. M1 is incorrect.</div>
@@ -43,6 +91,7 @@ class M extends React.Component {
 		response = this.updateResponse();
 		console.log("render");
 		console.log(this.state.ans);
+		
 		return (
 			<div>
 				<div className="nav">
