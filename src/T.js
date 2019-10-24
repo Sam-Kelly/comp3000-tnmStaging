@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 import PinchZoomPan from "react-responsive-pinch-zoom-pan";
 import Fieldset, { withFieldset, withFullName } from 'react-fieldset';
 import ReactImageMagnify from 'react-image-magnify';
+import FHIR from "fhirclient"
 
 import scanImg1 from './images/T_cancer.jpg';
 import mucosa from './images/mucosa.png';
@@ -44,7 +45,55 @@ class T extends React.Component {
 			response = <div style={{border:"2px solid green", padding:"15px"}}>T1 is correct. A tumour that is “T1” has invaded into the submucosa, which is the layer highlighted below.
 			<br></br><img src={submucosa} style={{padding:"15px", width:"500px", height:"500px"}}></img>
 			</div>
+			FHIR.oauth2.ready()
+    		.then(client => client.create(
+				{
+					"resourceType" : "Observation",
+					"meta" : {
+					  "profile" : [
+						"http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-TNMClinicalDistantMetastasesCategory"
+					  ]
+					},
+					"category" : [
+					  {
+						"coding" : [
+						  {
+							"system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+							"code" : "laboratory"
+						  }
+						]
+					  }
+					],
+					"code" : {
+					  "coding" : [
+						{
+						  "system" : "http://loinc.org",
+						  "code" : "21907-1",
+						  "display" : "Distant metastases.clinical [Class] Cancer"
+						}
+					  ]
+					},
+					"subject" : {
+					  "reference" : "Patient/31002",
+					  "display" : "Minimal Minimal"
+					},
+					"valueCodeableConcept" : {
+					  "coding" : [
+						{
+						  "system" : "hhttp://cancerstaging.org",
+						  "code" : "cM0",
+						  "display" : "M0"
+						}
+					  ]
+					},
+					"method" : {
+					  "text" : "AJCC Version 8"
+					}
+			})
+		.then(console.log)
+		.catch(console.error));
 		}
+		
 		if (this.state.ans=="t2") {
 			response = <div style={{border:"2px solid red", padding:"15px"}}>T2 is not correct. A tumour that is “T2” has invaded into the muscularis propria, which is the layer highlighted below.
 			<br></br><img src={muscularis} style={{padding:"15px", width:"500px", height:"500px"}}></img>
