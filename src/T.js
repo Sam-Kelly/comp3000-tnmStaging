@@ -51,9 +51,10 @@ class T extends React.Component {
 					"resourceType" : "Observation",
 					"meta" : {
 					  "profile" : [
-						"http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-TNMClinicalDistantMetastasesCategory"
+						"http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-TNMClinicalPrimaryTumorCategory"
 					  ]
 					},
+					"status" : "final",
 					"category" : [
 					  {
 						"coding" : [
@@ -68,8 +69,8 @@ class T extends React.Component {
 					  "coding" : [
 						{
 						  "system" : "http://loinc.org",
-						  "code" : "21907-1",
-						  "display" : "Distant metastases.clinical [Class] Cancer"
+						  "code" : "21905-5",
+						  "display" : "Primary tumor.clinical [Class] Cancer"
 						}
 					  ]
 					},
@@ -77,12 +78,13 @@ class T extends React.Component {
 					  "reference" : "Patient/31002",
 					  "display" : "Minimal Minimal"
 					},
+					"effectiveDateTime" : "2019-04-01",
 					"valueCodeableConcept" : {
 					  "coding" : [
 						{
-						  "system" : "hhttp://cancerstaging.org",
-						  "code" : "cM0",
-						  "display" : "M0"
+						  "system" : "http://cancerstaging.org",
+						  "code" : "cT1",
+						  "display" : "T1"
 						}
 					  ]
 					},
