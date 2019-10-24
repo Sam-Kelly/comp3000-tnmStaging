@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import FHIR from "fhirclient"
 
 class N extends React.Component {
 	constructor(props) {
@@ -35,6 +36,10 @@ class N extends React.Component {
 	}
 
 	render() {
+		FHIR.oauth2.ready()
+		.then(client => client.request("Observation?patient=31002"))
+		.then(console.log)
+
 		this.state.answer = window.Nval;
 		return (
 			<div>
