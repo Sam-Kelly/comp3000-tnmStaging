@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 import T from './T'
 import M from './M'
 import N from './N'
+import tick from './images/greenTick.png';
 
 
 class Intro extends React.Component {
@@ -15,7 +16,7 @@ class Intro extends React.Component {
 		console.log(window.Ncomplete);
 		console.log(window.Mval);
 		if (window.Tval == "t1" && window.Ncomplete == 1 && window.Mval == "m0") {
-			return <p>Congratulations, you have sucessfully completed the TNM staging process.</p>;
+			return <div><p>Congratulations, you have sucessfully completed the TNM staging process.</p><img src={tick} /></div>;
 		} else {
 			return <p>Please complete the T, N, and M portions of the app.</p>;
 		}
